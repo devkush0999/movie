@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, Text } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -24,6 +24,7 @@ export default function HomeScreen() {
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
           Press{' '}
+          <Text className="text-red-500">hii</Text>
           <ThemedText type="defaultSemiBold">
             {Platform.select({
               ios: 'cmd + d',
