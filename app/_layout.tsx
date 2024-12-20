@@ -31,6 +31,8 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+      {/* <Stack.Screen name="index" options={{ headerShown: true }}/> */}
+      {/* <Stack.Screen name="login" /> */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
@@ -38,3 +40,37 @@ export default function RootLayout() {
     </ThemeProvider>
   );
 }
+
+
+
+// import React from 'react';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import { createStackNavigator } from '@react-navigation/stack';
+
+// import HomeScreen from '@/app/(tabs)/index';
+// import Search from '@/app/(tabs)/Search';
+// import DetailsScreen from '@/app/[movieId]';
+
+// const Stack = createStackNavigator();
+// const Tab = createBottomTabNavigator();
+
+// // Stack Navigator for Home and Details
+// const HomeStack = () => (
+//   <Stack.Navigator>
+//     <Stack.Screen name="Home" component={HomeScreen} />
+//     <Stack.Screen name="Details" component={DetailsScreen} />
+//   </Stack.Navigator>
+// );
+
+// // Main App Layout
+// const Layout = () => (
+//   <NavigationContainer>
+//     <Tab.Navigator>
+//       <Tab.Screen name="Home" component={HomeStack} />
+//       <Tab.Screen name="Search" component={Search} />
+//     </Tab.Navigator>
+//   </NavigationContainer>
+// );
+
+// export default Layout;
